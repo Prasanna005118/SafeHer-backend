@@ -5,9 +5,9 @@
   "main": "dist/utils/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node --esm src/server.ts",
+    "dev": "ts-node --esm src/server.ts", // Updated path if you moved the file
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js" // 💥 FINAL CORRECTED PATH
   },
   "keywords": [],
   "author": "",
