@@ -1,7 +1,7 @@
 import { Router } from "express";
 import type { Request, Response } from "express";
-import EmergencyContact from "../models/EmergencyContact.ts";
-import { authenticate } from "../middleware/auth.ts";
+import EmergencyContact from "../models/EmergencyContact.js";
+import { authenticate } from "../middleware/auth.js";
 
 const router = Router();
 

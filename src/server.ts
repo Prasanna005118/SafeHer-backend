@@ -3,9 +3,10 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 
-import authRoutes from "./routes/auth.ts";
-import contactsRoutes from "./routes/contacts.ts";
-import emergencyRoutes from "./routes/emergency.ts";
+// 💥 FIX: Added .js extension to all local imports
+import authRoutes from "./routes/auth.js";
+import contactsRoutes from "./routes/contacts.js";
+import emergencyRoutes from "./routes/emergency.js";
 
 dotenv.config();
 

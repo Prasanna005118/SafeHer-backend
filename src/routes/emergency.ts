@@ -1,7 +1,7 @@
 import { Router } from "express";
 import type { Request, Response } from "express";
-import AlertLog from "../models/AlertLog.ts";
-import { authenticate } from "../middleware/auth.ts";
+import AlertLog from "../models/AlertLog.js";
+import { authenticate } from "../middleware/auth.js";
 
 const router = Router();
 

@@ -1,51 +1,40 @@
 {
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
-
     // Environment Settings
-    // See also https://aka.ms/tsconfig/module
     "target": "ES2020",
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "esModuleInterop": true,
-    "outDir": "./dist",
-    "rootDir": "./src",
+    
+    // File Layout and Output (CRITICAL FIXES)
+    "outDir": "./dist", // Output compiled JS files to the 'dist' folder
+    "rootDir": "./src", // Source files are located in the 'src' folder
     "forceConsistentCasingInFileNames": true,
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
 
+    // Node.js Recommended
+    "lib": ["ES2020"], 
+    "types": ["node"], // Include Node.js types
+    
     // Other Outputs
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
 
-    // Stricter Typechecking Options
+    // Stricter Typechecking Options (Recommended to keep)
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
-
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
-
-    // Recommended Options
     "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
+    
+    // Module Safety
     "moduleDetection": "force",
     "skipLibCheck": true,
-    "allowImportingTsExtensions" : true,
-    "noEmit": true,
-  }
+    
+    // 💥 FIX for TS5096: Must be removed when generating output files.
+    // "allowImportingTsExtensions" : true, 
+    
+    // Removed as not applicable to Node.js backend
+    // "jsx": "react-jsx" 
+  },
+  "include": ["src/**/*"] // Ensure all files in src are included
 }

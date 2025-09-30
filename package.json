@@ -1,8 +1,8 @@
 {
   "name": "safeher-backend-ts",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Backend for SafeHer Women's Safety Emergency Alert App",
+  "main": "dist/utils/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node --esm src/server.ts",
