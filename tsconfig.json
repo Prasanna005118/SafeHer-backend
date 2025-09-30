@@ -9,7 +9,7 @@
     
     // File Layout and Output (CRITICAL FIXES)
     "outDir": "./dist", // Output compiled JS files to the 'dist' folder
-    "rootDir": "./src", // Source files are located in the 'src' folder
+    "rootDir": "./", // Source files are located in the 'src' folder
     "forceConsistentCasingInFileNames": true,
 
     // Node.js Recommended
