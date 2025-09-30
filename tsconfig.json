@@ -8,13 +8,14 @@
     "esModuleInterop": true,
     
     // File Layout and Output (CRITICAL FIXES)
-    "outDir": "./dist", // Output compiled JS files to the 'dist' folder
-    "rootDir": "./", // Source files are located in the 'src' folder
+    "outDir": "./dist",
+    // 💥 FIX: Set rootDir to 'src' so the output is flattened to 'dist/'
+    "rootDir": "./src", 
     "forceConsistentCasingInFileNames": true,
 
     // Node.js Recommended
     "lib": ["ES2020"], 
-    "types": ["node"], // Include Node.js types
+    "types": ["node"],
     
     // Other Outputs
     "sourceMap": true,
@@ -28,13 +29,9 @@
     
     // Module Safety
     "moduleDetection": "force",
-    "skipLibCheck": true,
+    "skipLibCheck": true
     
-    // 💥 FIX for TS5096: Must be removed when generating output files.
-    // "allowImportingTsExtensions" : true, 
-    
-    // Removed as not applicable to Node.js backend
-    // "jsx": "react-jsx" 
   },
-  "include": ["src/**/*"] // Ensure all files in src are included
+  // Ensure only files within the 'src' directory are compiled
+  "include": ["src/**/*"]
 }
